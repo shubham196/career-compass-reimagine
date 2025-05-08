@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { GraduationCap, User, FileText, ChartBar, Star, Users, CheckCircle } from "lucide-react";
+import { GraduationCap, User, FileText, ChartBar, Star, Users, CheckCircle, BookOpen } from "lucide-react";
 
 const CareerCounsellorPage = () => {
   return (
@@ -284,7 +284,7 @@ const CareerCounsellorPage = () => {
                   <div className="flex flex-col md:flex-row gap-6">
                     <div className="md:w-1/4 flex justify-center">
                       <div className="w-20 h-20 rounded-full bg-gradient-to-br from-yellow-500 to-amber-600 flex items-center justify-center shadow-lg">
-                        <Brain className="w-10 h-10 text-white" />
+                        <BookOpen className="w-10 h-10 text-white" />
                       </div>
                     </div>
                     <div className="md:w-3/4">
