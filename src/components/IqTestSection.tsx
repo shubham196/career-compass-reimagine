@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Brain, Download, FileText, Award } from "lucide-react";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
 
 const IqTestSection = () => {
   return (
@@ -83,9 +84,11 @@ const IqTestSection = () => {
             <div className="flex justify-center mt-10">
               <HoverCard>
                 <HoverCardTrigger asChild>
-                  <Button className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white rounded-xl px-8 py-6 shadow-lg hover:shadow-xl transition-all duration-300">
-                    Take Free IQ Test
-                  </Button>
+                  <Link to="/iq-test">
+                    <Button className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white rounded-xl px-8 py-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                      Take Free IQ Test
+                    </Button>
+                  </Link>
                 </HoverCardTrigger>
                 <HoverCardContent className="w-80 text-sm bg-white p-4 shadow-lg border-none">
                   <p>Free 40-minute assessment with detailed insights into your cognitive abilities.</p>
@@ -98,7 +101,7 @@ const IqTestSection = () => {
             <div className="absolute -z-10 w-72 h-72 bg-purple-100 rounded-full top-12 -right-8 animate-pulse-slow"></div>
             <div className="absolute -z-10 w-48 h-48 bg-yellow-100 rounded-full bottom-12 -left-6 animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
             <img 
-              src="/lovable-uploads/42fe9926-470d-45cb-9d9a-2824a31c1b0a.png" 
+              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
               alt="Student taking IQ test" 
               className="rounded-2xl shadow-2xl max-w-full mx-auto animate-float relative z-10 border-4 border-white"
             />
