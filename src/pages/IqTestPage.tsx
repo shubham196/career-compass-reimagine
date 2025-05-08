@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Brain, FileText, Download, Lightbulb, GraduationCap, User, ChartBar } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Separator } from "@/components/ui/separator";
+import { Link } from "react-router-dom";
 
 const IqTestPage = () => {
   return (
@@ -412,7 +413,9 @@ const IqTestPage = () => {
                       <span className="text-gray-700">Study Habits Assessment – Improve academic performance</span>
                     </li>
                   </ul>
-                  <Button className="w-full bg-purple-600 hover:bg-purple-700">Learn More</Button>
+                  <Link to="/iq-test-10th-grade">
+                    <Button className="w-full bg-purple-600 hover:bg-purple-700">Learn More</Button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>
@@ -454,7 +457,9 @@ const IqTestPage = () => {
                       <span className="text-gray-700">Personality Test – Understand traits for career matching</span>
                     </li>
                   </ul>
-                  <Button className="w-full bg-indigo-600 hover:bg-indigo-700">Learn More</Button>
+                  <Link to="/iq-test-11th-12th-grade">
+                    <Button className="w-full bg-indigo-600 hover:bg-indigo-700">Learn More</Button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>
