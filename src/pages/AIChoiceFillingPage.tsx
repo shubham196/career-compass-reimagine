@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -697,7 +698,8 @@ const AIChoiceFillingPage = () => {
       <Footer />
       
       {/* Add animation keyframes to tailwind config if needed */}
-      <style jsx global>{`
+      <style>
+        {`
         @keyframes float {
           0%, 100% {
             transform: translateY(0);
@@ -709,9 +711,11 @@ const AIChoiceFillingPage = () => {
         .animate-pulse-slow {
           animation: pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
         }
-      `}</style>
+        `}
+      </style>
     </div>
   );
 };
 
 export default AIChoiceFillingPage;
+
