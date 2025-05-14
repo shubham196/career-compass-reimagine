@@ -9,6 +9,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import AIChoiceIllustration from "@/components/AIChoiceIllustration";
+import WhyAIChoiceFillingSVG from "@/components/WhyAIChoiceFillingSVG";
 import { 
   FileText, CheckSquare, BookOpen, BarChart4, 
   IndianRupee, ExternalLink, Star, Award, 
@@ -110,7 +111,7 @@ const AIChoiceFillingPage = () => {
       <Navbar />
 
       {/* Hero Banner with animated elements */}
-      <section className="bg-gradient-to-r from-purple-700 to-indigo-800 text-white py-20 relative overflow-hidden">
+      <section className="bg-theme-gradient text-white py-20 relative overflow-hidden">
         {/* Animated background elements */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-white opacity-5 rounded-full translate-x-1/2 -translate-y-1/4 animate-pulse-slow"></div>
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-white opacity-5 rounded-full -translate-x-1/3 translate-y-1/3 animate-pulse-slow"></div>
@@ -130,7 +131,7 @@ const AIChoiceFillingPage = () => {
           ))}
         </div>
         
-        <div className="container mx-auto px-4 text-center relative z-10">
+        <div className="container mx-auto px-4 relative z-10">
           <Badge className="mb-6 px-3 py-1 bg-white/20 backdrop-blur-sm text-white border-none">12th Grade Counselling</Badge>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">AI-Generated College Choice Filling Report</h1>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto mb-8 text-purple-100">
@@ -140,7 +141,7 @@ const AIChoiceFillingPage = () => {
           {/* Animated box showcasing AI report with GIF-like animation */}
           <div className="max-w-4xl mx-auto mb-10 p-2 bg-white/10 backdrop-blur-sm rounded-2xl">
             <div className="bg-purple-900/60 backdrop-blur-md p-6 rounded-xl relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-indigo-600/20"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-theme-primary/20 to-theme-secondary/20"></div>
               
               <div className="relative z-10 flex flex-col md:flex-row items-center gap-6">
                 <div className="md:w-1/3 flex justify-center">
@@ -148,7 +149,7 @@ const AIChoiceFillingPage = () => {
                     {/* Animated GIF-like element */}
                     <div className="w-48 h-48 relative bg-purple-400/10 backdrop-blur rounded-lg overflow-hidden flex items-center justify-center">
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-32 h-32 rounded-lg bg-gradient-to-br from-purple-500 to-blue-500 animate-pulse">
+                        <div className="w-32 h-32 rounded-lg bg-gradient-to-br from-theme-primary to-theme-secondary animate-pulse">
                           <div className="w-full h-full flex items-center justify-center">
                             <FileText className="w-16 h-16 text-white animate-bounce" />
                           </div>
@@ -185,26 +186,26 @@ const AIChoiceFillingPage = () => {
                 </div>
                 
                 <div className="md:w-2/3 text-left">
-                  <h3 className="text-2xl font-bold mb-2">Your Gateway to Top Colleges</h3>
+                  <h3 className="text-2xl font-bold mb-4">Your Gateway to Top Colleges</h3>
                   <ul className="mb-4 space-y-2">
                     <li className="flex items-center gap-2">
                       <CheckSquare className="w-5 h-5 text-green-300" />
-                      <span>Find colleges matching your JEE/NEET rank & category</span>
+                      <span>Personalized college recommendations based on your rank & category</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckSquare className="w-5 h-5 text-green-300" />
-                      <span>AI-recommended branches with highest future scope</span>
+                      <span>Branch-specific insights & placement stats for informed decisions</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckSquare className="w-5 h-5 text-green-300" />
-                      <span>Avoid missed opportunities with smart choices</span>
+                      <span>Round-by-round counselling strategy with ordering priority</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckSquare className="w-5 h-5 text-green-300" />
-                      <span>Step-by-step counselling guide with ordering strategy</span>
+                      <span>PDF format with instant email delivery after payment</span>
                     </li>
                   </ul>
-                  <Button size="lg" className="bg-white text-purple-700 hover:bg-purple-50 rounded-full px-8 py-6 text-lg shadow-xl transition-all duration-300 hover:scale-105">
+                  <Button size="lg" className="bg-white text-theme-secondary hover:bg-purple-50 rounded-full px-8 py-6 text-lg shadow-xl transition-all duration-300 hover:scale-105">
                     Generate My College Report Now
                   </Button>
                 </div>
@@ -214,57 +215,60 @@ const AIChoiceFillingPage = () => {
         </div>
       </section>
 
-      {/* Why AI Choice Filling with SVG illustration */}
+      {/* WHY? - Why AI Choice Filling with SVG illustration */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-8">
+              <Badge className="mb-2 px-3 py-1 bg-theme-primary/20 text-theme-secondary border-none">WHY?</Badge>
+              <h2 className="text-3xl font-bold text-gray-900">Why AI Choice Filling?</h2>
+            </div>
+            
             <div className="flex flex-col md:flex-row gap-16 items-center">
               <div className="md:w-1/2 order-2 md:order-1">
                 <div className="relative h-80 md:h-96">
-                  <AIChoiceIllustration />
+                  <WhyAIChoiceFillingSVG />
                 </div>
               </div>
               <div className="md:w-1/2 order-1 md:order-2">
-                <h2 className="text-3xl font-bold mb-6 text-gray-900">Why AI Choice Filling?</h2>
-                
                 <div className="space-y-6">
                   <div className="flex items-start gap-4 bg-purple-50 p-4 rounded-lg transform transition-all duration-300 hover:scale-105 hover:shadow-md">
                     <div className="mt-1 bg-purple-100 p-2 rounded-lg">
-                      <Brain className="w-6 h-6 text-purple-600" />
+                      <Brain className="w-6 h-6 text-theme-primary" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-purple-700">No More Guesswork</h3>
-                      <p className="text-gray-600">Stop stressing about which colleges to pick! Our AI analyzes your rank against 5 years of data to recommend perfect matches.</p>
+                      <h3 className="text-lg font-semibold text-theme-secondary">Avoid Guesswork</h3>
+                      <p className="text-gray-600">Get smart, data-driven college & branch suggestions tailored specifically to your needs</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start gap-4 bg-blue-50 p-4 rounded-lg transform transition-all duration-300 hover:scale-105 hover:shadow-md">
                     <div className="mt-1 bg-blue-100 p-2 rounded-lg">
-                      <Compass className="w-6 h-6 text-blue-600" />
+                      <Compass className="w-6 h-6 text-theme-primary" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-blue-700">Tailored Just for You</h3>
-                      <p className="text-gray-600">Personalized to your exact rank, category, home state, and preferences - like having a counselor in your pocket!</p>
+                      <h3 className="text-lg font-semibold text-theme-secondary">Personalized Recommendations</h3>
+                      <p className="text-gray-600">Customized to your rank, category, seat type, and personal preferences</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start gap-4 bg-green-50 p-4 rounded-lg transform transition-all duration-300 hover:scale-105 hover:shadow-md">
                     <div className="mt-1 bg-green-100 p-2 rounded-lg">
-                      <Lightbulb className="w-6 h-6 text-green-600" />
+                      <Lightbulb className="w-6 h-6 text-theme-primary" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-green-700">Future-Ready Choices</h3>
-                      <p className="text-gray-600">Discover emerging branches with amazing placement stats and future growth potential that others might miss.</p>
+                      <h3 className="text-lg font-semibold text-theme-secondary">Data-Driven Insights</h3>
+                      <p className="text-gray-600">Based on real-time trends, historical data, and past cut-offs from official sources</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start gap-4 bg-amber-50 p-4 rounded-lg transform transition-all duration-300 hover:scale-105 hover:shadow-md">
                     <div className="mt-1 bg-amber-100 p-2 rounded-lg">
-                      <CheckSquare className="w-6 h-6 text-amber-600" />
+                      <CheckSquare className="w-6 h-6 text-theme-primary" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-amber-700">Stress-Free Decision</h3>
-                      <p className="text-gray-600">Save hundreds of hours of research and second-guessing. Make confident decisions backed by data.</p>
+                      <h3 className="text-lg font-semibold text-theme-secondary">Save Time & Reduce Stress</h3>
+                      <p className="text-gray-600">Eliminate hours of research with organized, strategic choices that maximize your opportunities</p>
                     </div>
                   </div>
                 </div>
@@ -274,100 +278,109 @@ const AIChoiceFillingPage = () => {
         </div>
       </section>
 
-      {/* How to Use It - Updated to be more visually appealing */}
+      {/* WHAT? - How to Read & Use Your AI Report - Enhanced with visual elements */}
       <section className="py-16 bg-gray-50 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-purple-50 opacity-50"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-12">
-            <Badge className="mb-3 bg-indigo-100 text-indigo-700 border-indigo-200 hover:bg-indigo-200">Step by Step</Badge>
-            <h2 className="text-3xl font-bold mb-4 text-gray-900">How to Read & Use Your AI Report</h2>
+            <Badge className="mb-3 bg-theme-primary/20 text-theme-secondary border-none">WHAT?</Badge>
+            <h2 className="text-3xl font-bold mb-4 text-gray-900">What's in Your AI Report?</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Your report is designed to be super easy to understand even if this is your first counselling experience
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <Card className="border-none shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 bg-white group">
-              <CardContent className="p-8">
-                <div className="w-16 h-16 mb-5 rounded-xl bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center transform group-hover:rotate-6 transition-all">
-                  <FileText className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-800">Color-Coded Choices</h3>
-                <p className="text-gray-600 mb-4">
-                  Green sections show safe choices where you'll definitely get in. Yellow for moderate chances, and blue for dream colleges worth trying.
-                </p>
-                <div className="flex gap-2">
-                  <span className="px-3 py-1 bg-green-100 text-green-700 text-sm rounded-full">Safe Picks</span>
-                  <span className="px-3 py-1 bg-yellow-100 text-yellow-700 text-sm rounded-full">Worth Trying</span>
-                  <span className="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full">Dream Options</span>
-                </div>
-              </CardContent>
-            </Card>
-            
-            <Card className="border-none shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 bg-white group">
-              <CardContent className="p-8">
-                <div className="w-16 h-16 mb-5 rounded-xl bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center transform group-hover:rotate-6 transition-all">
-                  <BookOpen className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-800">Filling Strategy</h3>
-                <p className="text-gray-600 mb-4">
-                  Your report includes a round-by-round strategy with exactly when to lock choices, when to float, and when to freeze your seat.
-                </p>
-                <div className="flex flex-col gap-1">
-                  <div className="flex items-center">
-                    <span className="w-6 h-6 rounded-full bg-purple-100 text-purple-700 flex items-center justify-center text-xs mr-2">1</span>
-                    <span className="text-sm text-gray-700">Initial selections</span>
+            <Card className="border-none shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 bg-white group overflow-hidden">
+              <CardContent className="p-0">
+                <div className="h-3 bg-theme-gradient"></div>
+                <div className="p-8">
+                  <div className="w-16 h-16 mb-5 rounded-xl bg-gradient-to-br from-theme-primary to-theme-secondary flex items-center justify-center transform group-hover:rotate-6 transition-all">
+                    <FileText className="w-8 h-8 text-white" />
                   </div>
-                  <div className="flex items-center">
-                    <span className="w-6 h-6 rounded-full bg-purple-100 text-purple-700 flex items-center justify-center text-xs mr-2">2</span>
-                    <span className="text-sm text-gray-700">Float vs. freeze strategy</span>
-                  </div>
-                  <div className="flex items-center">
-                    <span className="w-6 h-6 rounded-full bg-purple-100 text-purple-700 flex items-center justify-center text-xs mr-2">3</span>
-                    <span className="text-sm text-gray-700">Final decision guide</span>
+                  <h3 className="text-xl font-bold mb-3 text-gray-800">Color-Coded Choices</h3>
+                  <p className="text-gray-600 mb-4">
+                    Green sections show safe choices where you'll definitely get in. Yellow for moderate chances, and blue for dream colleges worth trying.
+                  </p>
+                  <div className="flex gap-2 flex-wrap">
+                    <span className="px-3 py-1 bg-green-100 text-green-700 text-sm rounded-full">Safe Picks</span>
+                    <span className="px-3 py-1 bg-yellow-100 text-yellow-700 text-sm rounded-full">Worth Trying</span>
+                    <span className="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full">Dream Options</span>
                   </div>
                 </div>
               </CardContent>
             </Card>
             
-            <Card className="border-none shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 bg-white group">
-              <CardContent className="p-8">
-                <div className="w-16 h-16 mb-5 rounded-xl bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center transform group-hover:rotate-6 transition-all">
-                  <BarChart4 className="w-8 h-8 text-white" />
+            <Card className="border-none shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 bg-white group overflow-hidden">
+              <CardContent className="p-0">
+                <div className="h-3 bg-theme-gradient"></div>
+                <div className="p-8">
+                  <div className="w-16 h-16 mb-5 rounded-xl bg-gradient-to-br from-theme-primary to-theme-secondary flex items-center justify-center transform group-hover:rotate-6 transition-all">
+                    <BookOpen className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-gray-800">Branch Insights</h3>
+                  <p className="text-gray-600 mb-4">
+                    Detailed info about each branch including placements, average packages, and future scope to make smarter choices.
+                  </p>
+                  <div className="flex flex-col gap-2">
+                    <div className="flex items-center">
+                      <span className="w-6 h-6 rounded-full bg-theme-primary/20 text-theme-secondary flex items-center justify-center text-xs mr-2">1</span>
+                      <span className="text-sm text-gray-700">Placement statistics</span>
+                    </div>
+                    <div className="flex items-center">
+                      <span className="w-6 h-6 rounded-full bg-theme-primary/20 text-theme-secondary flex items-center justify-center text-xs mr-2">2</span>
+                      <span className="text-sm text-gray-700">Future growth prospects</span>
+                    </div>
+                    <div className="flex items-center">
+                      <span className="w-6 h-6 rounded-full bg-theme-primary/20 text-theme-secondary flex items-center justify-center text-xs mr-2">3</span>
+                      <span className="text-sm text-gray-700">Salary comparison</span>
+                    </div>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-800">Beyond Counselling</h3>
-                <p className="text-gray-600 mb-4">
-                  Your report includes bonus tips on scholarships, hostel selection, and special programs unique to each recommended college.
-                </p>
-                <ul className="space-y-1">
-                  <li className="flex items-center text-sm text-gray-700">
-                    <CheckSquare className="w-4 h-4 text-green-600 mr-2" />
-                    <span>Scholarship opportunities</span>
-                  </li>
-                  <li className="flex items-center text-sm text-gray-700">
-                    <CheckSquare className="w-4 h-4 text-green-600 mr-2" />
-                    <span>Campus life insights</span>
-                  </li>
-                  <li className="flex items-center text-sm text-gray-700">
-                    <CheckSquare className="w-4 h-4 text-green-600 mr-2" />
-                    <span>Special programs & internships</span>
-                  </li>
-                </ul>
+              </CardContent>
+            </Card>
+            
+            <Card className="border-none shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 bg-white group overflow-hidden">
+              <CardContent className="p-0">
+                <div className="h-3 bg-theme-gradient"></div>
+                <div className="p-8">
+                  <div className="w-16 h-16 mb-5 rounded-xl bg-gradient-to-br from-theme-primary to-theme-secondary flex items-center justify-center transform group-hover:rotate-6 transition-all">
+                    <BarChart4 className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-gray-800">Strategic Planning</h3>
+                  <p className="text-gray-600 mb-4">
+                    Round-by-round action plan with float vs freeze strategy to maximize your chances of getting the best college.
+                  </p>
+                  <ul className="space-y-1">
+                    <li className="flex items-center text-sm text-gray-700">
+                      <CheckSquare className="w-4 h-4 text-theme-primary mr-2" />
+                      <span>Round-wise strategy</span>
+                    </li>
+                    <li className="flex items-center text-sm text-gray-700">
+                      <CheckSquare className="w-4 h-4 text-theme-primary mr-2" />
+                      <span>Timing recommendations</span>
+                    </li>
+                    <li className="flex items-center text-sm text-gray-700">
+                      <CheckSquare className="w-4 h-4 text-theme-primary mr-2" />
+                      <span>College & branch ordering</span>
+                    </li>
+                  </ul>
+                </div>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
 
-      {/* AI Report Types Section - Enhanced */}
+      {/* HOW? - AI Report Types Section - Enhanced with theme colors */}
       <section className="py-16 bg-white relative">
         <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-gray-50 to-white"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-12">
-            <Badge variant="outline" className="mb-2 bg-purple-50 text-purple-700 border-purple-200">Choose Your Perfect Match</Badge>
-            <h2 className="text-3xl font-bold mb-4 text-gray-900">AI Reports for Your Entrance Exam</h2>
+            <Badge variant="outline" className="mb-2 bg-theme-primary/20 text-theme-secondary border-theme-primary/30">HOW?</Badge>
+            <h2 className="text-3xl font-bold mb-4 text-gray-900">Choose Your Perfect AI Report</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Select your exam below and get a specialized AI report tailored to that specific counselling process
+              Select the report that matches your exam and get step-by-step guidance designed for 12th standard students
             </p>
           </div>
           
@@ -375,15 +388,15 @@ const AIChoiceFillingPage = () => {
             {examReports.map((report) => (
               <Card 
                 key={report.id} 
-                className={`border-2 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden group ${report.color}`}
+                className="border-2 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden group border-theme-primary/30 bg-white"
               >
                 <CardContent className="p-0">
-                  <div className={`${report.iconBg} p-4 group-hover:bg-opacity-80 transition-all`}>
+                  <div className="bg-theme-gradient p-4 text-white group-hover:opacity-90 transition-all">
                     <div className="flex items-center gap-4">
-                      <div className={`w-14 h-14 rounded-full bg-white flex items-center justify-center shadow-md`}>
+                      <div className="w-14 h-14 rounded-full bg-white/90 flex items-center justify-center shadow-md">
                         {report.icon}
                       </div>
-                      <h3 className={`text-xl font-bold ${report.textColor}`}>{report.title}</h3>
+                      <h3 className="text-xl font-bold">{report.title}</h3>
                     </div>
                   </div>
                   
@@ -391,11 +404,11 @@ const AIChoiceFillingPage = () => {
                     <p className="text-gray-600 mb-5 min-h-[60px]">{report.description}</p>
                     
                     <div className="bg-gray-50 p-4 rounded-lg mb-6">
-                      <h4 className={`font-semibold mb-2 ${report.textColor}`}>What's Included:</h4>
+                      <h4 className="font-semibold mb-2 text-theme-secondary">What's Included:</h4>
                       <ul className="space-y-2">
                         {report.features.map((feature, idx) => (
                           <li key={idx} className="flex items-start gap-2">
-                            <CheckSquare className="w-5 h-5 text-green-600 mt-0.5" />
+                            <CheckSquare className="w-5 h-5 text-theme-primary mt-0.5" />
                             <span className="text-gray-700">{feature}</span>
                           </li>
                         ))}
@@ -405,19 +418,19 @@ const AIChoiceFillingPage = () => {
                     <Dialog>
                       <DialogTrigger asChild>
                         <Button 
-                          className={`w-full ${report.textColor.replace('text', 'bg')} hover:opacity-90 text-white py-6 font-semibold text-lg shadow-md group-hover:shadow-lg transition-all`}
+                          className="w-full bg-theme-gradient hover:opacity-90 text-white py-6 font-semibold text-lg shadow-md group-hover:shadow-lg transition-all"
                           onClick={() => setSelectedExam(report.title)}
                         >
                           Get Your AI Report
                         </Button>
                       </DialogTrigger>
-                      <DialogContent className="sm:max-w-md">
+                      <DialogContent className="sm:max-w-md max-h-[90vh] overflow-y-auto">
                         <AIReportForm examType={selectedExam || report.title} />
                       </DialogContent>
                     </Dialog>
                   </div>
                   
-                  <div className={`h-1 w-full ${report.textColor.replace('text', 'bg')}`}></div>
+                  <div className="h-1 w-full bg-theme-gradient"></div>
                 </CardContent>
               </Card>
             ))}
@@ -425,7 +438,7 @@ const AIChoiceFillingPage = () => {
         </div>
       </section>
 
-      {/* Sample Report */}
+      {/* Sample Report - Updated to match theme */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -438,17 +451,23 @@ const AIChoiceFillingPage = () => {
           
           <div className="max-w-5xl mx-auto">
             <Tabs defaultValue="preview" className="w-full">
-              <TabsList className="grid grid-cols-3 mb-8">
-                <TabsTrigger value="preview" className="text-base">Report Preview</TabsTrigger>
-                <TabsTrigger value="features" className="text-base">What's Inside</TabsTrigger>
-                <TabsTrigger value="testimonials" className="text-base">Student Reviews</TabsTrigger>
+              <TabsList className="grid grid-cols-3 mb-8 bg-theme-primary/10">
+                <TabsTrigger value="preview" className="text-base data-[state=active]:bg-theme-primary data-[state=active]:text-white">
+                  Report Preview
+                </TabsTrigger>
+                <TabsTrigger value="features" className="text-base data-[state=active]:bg-theme-primary data-[state=active]:text-white">
+                  What's Inside
+                </TabsTrigger>
+                <TabsTrigger value="testimonials" className="text-base data-[state=active]:bg-theme-primary data-[state=active]:text-white">
+                  Student Reviews
+                </TabsTrigger>
               </TabsList>
               
               {/* Report Preview Tab */}
               <TabsContent value="preview" className="border rounded-lg p-6 shadow-md bg-white">
                 <div className="flex flex-col md:flex-row gap-6">
                   <div className="md:w-1/2">
-                    <div className="border-2 border-purple-200 rounded-lg overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    <div className="border-2 border-theme-primary/20 rounded-lg overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
                       <img 
                         src="https://images.unsplash.com/photo-1581091214196-88f87eb3bbb5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                         alt="AI Report Example" 
@@ -456,31 +475,31 @@ const AIChoiceFillingPage = () => {
                       />
                     </div>
                     <div className="mt-4 text-center">
-                      <a href="#" className="inline-flex items-center text-purple-600 hover:text-purple-800 font-medium bg-purple-50 px-4 py-2 rounded-full hover:bg-purple-100 transition-colors">
+                      <a href="#" className="inline-flex items-center text-theme-secondary hover:text-theme-primary font-medium bg-theme-primary/10 px-4 py-2 rounded-full hover:bg-theme-primary/20 transition-colors">
                         View Full Sample Report <ExternalLink className="ml-2 w-4 h-4" />
                       </a>
                     </div>
                   </div>
                   <div className="md:w-1/2">
-                    <h3 className="text-2xl font-bold mb-4 text-purple-700">What You'll Get</h3>
+                    <h3 className="text-2xl font-bold mb-4 text-theme-secondary">What You'll Get</h3>
                     <div className="space-y-4">
-                      <div className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500 transform transition-all duration-300 hover:-translate-x-1">
-                        <h4 className="font-semibold text-purple-700 mb-2">College Recommendations</h4>
+                      <div className="bg-purple-50 p-4 rounded-lg border-l-4 border-theme-primary transform transition-all duration-300 hover:-translate-x-1">
+                        <h4 className="font-semibold text-theme-secondary mb-2">College Recommendations</h4>
                         <p className="text-gray-700">50+ college options perfectly matched to your rank with branch-specific insights.</p>
                       </div>
                       
-                      <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500 transform transition-all duration-300 hover:-translate-x-1">
-                        <h4 className="font-semibold text-blue-700 mb-2">Strategic Choice Order</h4>
+                      <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-theme-secondary transform transition-all duration-300 hover:-translate-x-1">
+                        <h4 className="font-semibold text-theme-secondary mb-2">Strategic Choice Order</h4>
                         <p className="text-gray-700">Optimized filing sequence that maximizes your chances of getting the best possible option.</p>
                       </div>
                       
-                      <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-500 transform transition-all duration-300 hover:-translate-x-1">
-                        <h4 className="font-semibold text-green-700 mb-2">Future Outlook Analysis</h4>
+                      <div className="bg-green-50 p-4 rounded-lg border-l-4 border-theme-primary transform transition-all duration-300 hover:-translate-x-1">
+                        <h4 className="font-semibold text-theme-secondary mb-2">Future Outlook Analysis</h4>
                         <p className="text-gray-700">Career growth projections and placement insights for each recommended branch.</p>
                       </div>
                       
-                      <div className="bg-amber-50 p-4 rounded-lg border-l-4 border-amber-500 transform transition-all duration-300 hover:-translate-x-1">
-                        <h4 className="font-semibold text-amber-700 mb-2">Round-by-Round Plan</h4>
+                      <div className="bg-amber-50 p-4 rounded-lg border-l-4 border-theme-secondary transform transition-all duration-300 hover:-translate-x-1">
+                        <h4 className="font-semibold text-theme-secondary mb-2">Round-by-Round Plan</h4>
                         <p className="text-gray-700">Detailed counselling strategy with decision points for each counselling round.</p>
                       </div>
                     </div>
@@ -493,7 +512,7 @@ const AIChoiceFillingPage = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-4">
                     <div className="flex items-start gap-3 bg-gray-50 p-4 rounded-lg transform transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-                      <Badge className="mt-1 bg-purple-100 text-purple-700 h-8 w-8 flex items-center justify-center p-0 text-base">1</Badge>
+                      <Badge className="mt-1 bg-theme-primary/20 text-theme-secondary h-8 w-8 flex items-center justify-center p-0 text-base">1</Badge>
                       <div>
                         <h4 className="font-semibold text-gray-800">Rank-Based Matching</h4>
                         <p className="text-gray-600">College suggestions calculated specifically for your rank and category, with probabilities for each round.</p>
@@ -501,7 +520,7 @@ const AIChoiceFillingPage = () => {
                     </div>
                     
                     <div className="flex items-start gap-3 bg-gray-50 p-4 rounded-lg transform transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-                      <Badge className="mt-1 bg-purple-100 text-purple-700 h-8 w-8 flex items-center justify-center p-0 text-base">2</Badge>
+                      <Badge className="mt-1 bg-theme-primary/20 text-theme-secondary h-8 w-8 flex items-center justify-center p-0 text-base">2</Badge>
                       <div>
                         <h4 className="font-semibold text-gray-800">Trend Analysis</h4>
                         <p className="text-gray-600">Five-year historical data analysis to predict this year's cut-offs with remarkable accuracy.</p>
@@ -509,7 +528,7 @@ const AIChoiceFillingPage = () => {
                     </div>
                     
                     <div className="flex items-start gap-3 bg-gray-50 p-4 rounded-lg transform transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-                      <Badge className="mt-1 bg-purple-100 text-purple-700 h-8 w-8 flex items-center justify-center p-0 text-base">3</Badge>
+                      <Badge className="mt-1 bg-theme-primary/20 text-theme-secondary h-8 w-8 flex items-center justify-center p-0 text-base">3</Badge>
                       <div>
                         <h4 className="font-semibold text-gray-800">Fee Breakdown</h4>
                         <p className="text-gray-600">Complete college-wise fee structures including tuition, hostel, mess, and additional expenses.</p>
@@ -519,7 +538,7 @@ const AIChoiceFillingPage = () => {
                   
                   <div className="space-y-4">
                     <div className="flex items-start gap-3 bg-gray-50 p-4 rounded-lg transform transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-                      <Badge className="mt-1 bg-purple-100 text-purple-700 h-8 w-8 flex items-center justify-center p-0 text-base">4</Badge>
+                      <Badge className="mt-1 bg-theme-primary/20 text-theme-secondary h-8 w-8 flex items-center justify-center p-0 text-base">4</Badge>
                       <div>
                         <h4 className="font-semibold text-gray-800">Placements & Packages</h4>
                         <p className="text-gray-600">Branch-wise placement rates and average salary packages from top colleges and their recent recruiters.</p>
@@ -527,7 +546,7 @@ const AIChoiceFillingPage = () => {
                     </div>
                     
                     <div className="flex items-start gap-3 bg-gray-50 p-4 rounded-lg transform transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-                      <Badge className="mt-1 bg-purple-100 text-purple-700 h-8 w-8 flex items-center justify-center p-0 text-base">5</Badge>
+                      <Badge className="mt-1 bg-theme-primary/20 text-theme-secondary h-8 w-8 flex items-center justify-center p-0 text-base">5</Badge>
                       <div>
                         <h4 className="font-semibold text-gray-800">Campus Life</h4>
                         <p className="text-gray-600">Campus infrastructure, student clubs, technical festivals, and available facilities overview.</p>
@@ -535,7 +554,7 @@ const AIChoiceFillingPage = () => {
                     </div>
                     
                     <div className="flex items-start gap-3 bg-gray-50 p-4 rounded-lg transform transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-                      <Badge className="mt-1 bg-purple-100 text-purple-700 h-8 w-8 flex items-center justify-center p-0 text-base">6</Badge>
+                      <Badge className="mt-1 bg-theme-primary/20 text-theme-secondary h-8 w-8 flex items-center justify-center p-0 text-base">6</Badge>
                       <div>
                         <h4 className="font-semibold text-gray-800">Future-Ready Options</h4>
                         <p className="text-gray-600">Emerging branches with strong growth potential and high job security highlighted specifically.</p>
@@ -550,7 +569,7 @@ const AIChoiceFillingPage = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="bg-gray-50 p-6 rounded-lg hover:shadow-md transition-all hover:-translate-y-1">
                     <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 rounded-full bg-purple-200 flex items-center justify-center text-purple-700 font-bold text-lg mr-3">
+                      <div className="w-12 h-12 rounded-full bg-theme-primary/20 flex items-center justify-center text-theme-secondary font-bold text-lg mr-3">
                         RS
                       </div>
                       <div>
@@ -570,7 +589,7 @@ const AIChoiceFillingPage = () => {
                   
                   <div className="bg-gray-50 p-6 rounded-lg hover:shadow-md transition-all hover:-translate-y-1">
                     <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 rounded-full bg-blue-200 flex items-center justify-center text-blue-700 font-bold text-lg mr-3">
+                      <div className="w-12 h-12 rounded-full bg-theme-primary/20 flex items-center justify-center text-theme-secondary font-bold text-lg mr-3">
                         AP
                       </div>
                       <div>
@@ -590,7 +609,7 @@ const AIChoiceFillingPage = () => {
                   
                   <div className="bg-gray-50 p-6 rounded-lg hover:shadow-md transition-all hover:-translate-y-1">
                     <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 rounded-full bg-green-200 flex items-center justify-center text-green-700 font-bold text-lg mr-3">
+                      <div className="w-12 h-12 rounded-full bg-theme-primary/20 flex items-center justify-center text-theme-secondary font-bold text-lg mr-3">
                         KT
                       </div>
                       <div>
@@ -610,7 +629,7 @@ const AIChoiceFillingPage = () => {
                   
                   <div className="bg-gray-50 p-6 rounded-lg hover:shadow-md transition-all hover:-translate-y-1">
                     <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 rounded-full bg-amber-200 flex items-center justify-center text-amber-700 font-bold text-lg mr-3">
+                      <div className="w-12 h-12 rounded-full bg-theme-primary/20 flex items-center justify-center text-theme-secondary font-bold text-lg mr-3">
                         SM
                       </div>
                       <div>
@@ -634,11 +653,11 @@ const AIChoiceFillingPage = () => {
         </div>
       </section>
 
-      {/* Pricing Section */}
+      {/* Pricing Section - Updated with theme colors */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
-            <div className="bg-gradient-to-r from-purple-600 to-indigo-700 p-8 text-white text-center">
+            <div className="bg-theme-gradient p-8 text-white text-center">
               <h2 className="text-3xl font-bold mb-2">Get Your AI Report Today</h2>
               <p className="text-xl opacity-90">One smart decision for your entire college journey</p>
             </div>
@@ -648,27 +667,27 @@ const AIChoiceFillingPage = () => {
                 <h3 className="text-2xl font-bold mb-4 text-gray-800">AI Choice Filling Report</h3>
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-center">
-                    <CheckSquare className="w-5 h-5 text-green-500 mr-2" />
+                    <CheckSquare className="w-5 h-5 text-theme-primary mr-2" />
                     <span className="text-gray-700">Personalized college recommendations</span>
                   </li>
                   <li className="flex items-center">
-                    <CheckSquare className="w-5 h-5 text-green-500 mr-2" />
+                    <CheckSquare className="w-5 h-5 text-theme-primary mr-2" />
                     <span className="text-gray-700">Branch-specific insights & placement stats</span>
                   </li>
                   <li className="flex items-center">
-                    <CheckSquare className="w-5 h-5 text-green-500 mr-2" />
+                    <CheckSquare className="w-5 h-5 text-theme-primary mr-2" />
                     <span className="text-gray-700">Round-by-round counselling strategy</span>
                   </li>
                   <li className="flex items-center">
-                    <CheckSquare className="w-5 h-5 text-green-500 mr-2" />
+                    <CheckSquare className="w-5 h-5 text-theme-primary mr-2" />
                     <span className="text-gray-700">College fee & scholarship information</span>
                   </li>
                   <li className="flex items-center">
-                    <CheckSquare className="w-5 h-5 text-green-500 mr-2" />
+                    <CheckSquare className="w-5 h-5 text-theme-primary mr-2" />
                     <span className="text-gray-700">PDF format with instant email delivery</span>
                   </li>
                   <li className="flex items-center">
-                    <CheckSquare className="w-5 h-5 text-green-500 mr-2" />
+                    <CheckSquare className="w-5 h-5 text-theme-primary mr-2" />
                     <span className="text-gray-700">One-time payment, yours forever</span>
                   </li>
                 </ul>
@@ -686,8 +705,8 @@ const AIChoiceFillingPage = () => {
                 <h3 className="text-xl font-semibold mb-4 text-gray-800">How It Works</h3>
                 <ol className="space-y-4 mb-6">
                   <li className="flex">
-                    <div className="bg-purple-100 rounded-full w-7 h-7 flex items-center justify-center mr-3 mt-1 shrink-0">
-                      <span className="text-purple-700 font-semibold">1</span>
+                    <div className="bg-theme-primary/20 rounded-full w-7 h-7 flex items-center justify-center mr-3 mt-1 shrink-0">
+                      <span className="text-theme-secondary font-semibold">1</span>
                     </div>
                     <div>
                       <h4 className="font-medium text-gray-800">Complete the Form</h4>
@@ -696,8 +715,8 @@ const AIChoiceFillingPage = () => {
                   </li>
                   
                   <li className="flex">
-                    <div className="bg-purple-100 rounded-full w-7 h-7 flex items-center justify-center mr-3 mt-1 shrink-0">
-                      <span className="text-purple-700 font-semibold">2</span>
+                    <div className="bg-theme-primary/20 rounded-full w-7 h-7 flex items-center justify-center mr-3 mt-1 shrink-0">
+                      <span className="text-theme-secondary font-semibold">2</span>
                     </div>
                     <div>
                       <h4 className="font-medium text-gray-800">Make the Payment</h4>
@@ -706,8 +725,8 @@ const AIChoiceFillingPage = () => {
                   </li>
                   
                   <li className="flex">
-                    <div className="bg-purple-100 rounded-full w-7 h-7 flex items-center justify-center mr-3 mt-1 shrink-0">
-                      <span className="text-purple-700 font-semibold">3</span>
+                    <div className="bg-theme-primary/20 rounded-full w-7 h-7 flex items-center justify-center mr-3 mt-1 shrink-0">
+                      <span className="text-theme-secondary font-semibold">3</span>
                     </div>
                     <div>
                       <h4 className="font-medium text-gray-800">Get Your AI Report</h4>
@@ -716,7 +735,7 @@ const AIChoiceFillingPage = () => {
                   </li>
                 </ol>
                 
-                <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white py-6 rounded-lg text-lg">
+                <Button className="w-full bg-theme-gradient hover:opacity-90 text-white py-6 rounded-lg text-lg">
                   Get My AI Report Now
                 </Button>
               </div>
@@ -738,35 +757,35 @@ const AIChoiceFillingPage = () => {
           <div className="max-w-4xl mx-auto">
             <div className="space-y-6">
               <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
-                <h3 className="text-xl font-semibold mb-2 text-gray-800">How accurate are the AI recommendations?</h3>
+                <h3 className="text-xl font-semibold mb-2 text-theme-secondary">How accurate are the AI recommendations?</h3>
                 <p className="text-gray-600">
                   Our AI model uses data from the past 5 years of counseling sessions, including cut-off trends, seat allotments, and college rankings. The recommendations have a 92% accuracy rate when followed correctly.
                 </p>
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
-                <h3 className="text-xl font-semibold mb-2 text-gray-800">How long does it take to get my report?</h3>
+                <h3 className="text-xl font-semibold mb-2 text-theme-secondary">How long does it take to get my report?</h3>
                 <p className="text-gray-600">
                   Reports are delivered instantly to your email after payment confirmation. You can download the PDF immediately.
                 </p>
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
-                <h3 className="text-xl font-semibold mb-2 text-gray-800">What information do I need to provide?</h3>
+                <h3 className="text-xl font-semibold mb-2 text-theme-secondary">What information do I need to provide?</h3>
                 <p className="text-gray-600">
                   You'll need to provide your exam rank, category (General/OBC/SC/ST), gender, domicile state, and any specific preferences you have regarding location or branches.
                 </p>
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
-                <h3 className="text-xl font-semibold mb-2 text-gray-800">Can I get a refund if I'm not satisfied?</h3>
+                <h3 className="text-xl font-semibold mb-2 text-theme-secondary">Can I get a refund if I'm not satisfied?</h3>
                 <p className="text-gray-600">
                   We offer a 100% satisfaction guarantee. If you find the recommendations aren't helpful, contact our support team within 24 hours of purchase for assistance or a refund.
                 </p>
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
-                <h3 className="text-xl font-semibold mb-2 text-gray-800">Which exams and counseling processes are supported?</h3>
+                <h3 className="text-xl font-semibold mb-2 text-theme-secondary">Which exams and counseling processes are supported?</h3>
                 <p className="text-gray-600">
                   Our AI reports support JEE Main/Advanced (JoSAA counseling), NEET, BITSAT, and most state-level engineering and medical entrance exams.
                 </p>
@@ -778,7 +797,7 @@ const AIChoiceFillingPage = () => {
 
       <Footer />
       
-      {/* Add animation keyframes to tailwind config if needed */}
+      {/* Add animation keyframes to style */}
       <style>
         {`
         @keyframes float {
@@ -799,4 +818,3 @@ const AIChoiceFillingPage = () => {
 };
 
 export default AIChoiceFillingPage;
-

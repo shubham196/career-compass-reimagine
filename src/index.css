@@ -118,3 +118,23 @@
   border-style: solid;
   border-color: white transparent;
 }
+
+.bg-theme-gradient {
+  background: linear-gradient(90deg, #BB53CC, #8E24AA);
+}
+
+.text-theme-primary {
+  color: #BB53CC;
+}
+
+.text-theme-secondary {
+  color: #8E24AA;
+}
+
+.bg-theme-primary {
+  background-color: #BB53CC;
+}
+
+.bg-theme-secondary {
+  background-color: #8E24AA;
+}
