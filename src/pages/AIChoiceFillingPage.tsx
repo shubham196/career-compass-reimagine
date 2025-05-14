@@ -1,31 +1,180 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import AIReportForm from "@/components/AIReportForm";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { FileText, CheckSquare, BookOpen, BarChart4, IndianRupee, ExternalLink, Star } from "lucide-react";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { FileText, CheckSquare, BookOpen, BarChart4, IndianRupee, ExternalLink, Star, Award, BookText } from "lucide-react";
 
 const AIChoiceFillingPage = () => {
+  const [selectedExam, setSelectedExam] = useState<string | null>(null);
+
+  const examReports = [
+    {
+      id: "jee-main",
+      title: "JEE Main AI Choice Filling Report",
+      icon: <FileText className="w-10 h-10 text-purple-600" />,
+      color: "bg-purple-50 border-purple-200",
+      iconBg: "bg-purple-100",
+      textColor: "text-purple-700",
+      description: "Get optimal college & branch selections for JEE Main ranks with predicted cut-offs and future prospects.",
+      features: [
+        "Complete list of NITs, IIITs & GFTIs by rank",
+        "Round-wise filling strategy",
+        "Home state quota advantage analysis",
+      ]
+    },
+    {
+      id: "jee-advanced",
+      title: "JEE Advanced IIT Counselling Report",
+      icon: <Award className="w-10 h-10 text-blue-600" />,
+      color: "bg-blue-50 border-blue-200",
+      iconBg: "bg-blue-100",
+      textColor: "text-blue-700",
+      description: "IIT-focused counselling guidance with branch-wise rankings and opportunities across all 23 IITs.",
+      features: [
+        "All 23 IITs branch-wise predictions",
+        "Previous years' closing ranks analysis",
+        "Special emphasis on newer IITs"
+      ]
+    },
+    {
+      id: "neet",
+      title: "NEET Medical Counselling Report",
+      icon: <BookText className="w-10 h-10 text-green-600" />,
+      color: "bg-green-50 border-green-200",
+      iconBg: "bg-green-100",
+      textColor: "text-green-700",
+      description: "Comprehensive medical college selection guide for MBBS & BDS with AIQ and state quota predictions.",
+      features: [
+        "Government & Private Medical Colleges",
+        "State-wise NEET cutoffs & predictions",
+        "AIQ vs State Quota strategic analysis"
+      ]
+    },
+    {
+      id: "bitsat",
+      title: "BITS Pilani Admissions Report",
+      icon: <BookOpen className="w-10 h-10 text-amber-600" />,
+      color: "bg-amber-50 border-amber-200",
+      iconBg: "bg-amber-100",
+      textColor: "text-amber-700",
+      description: "BITS Pilani campuses & dual degree options explored with score-based recommendations.",
+      features: [
+        "Campus & branch-wise cutoffs",
+        "Dual degree opportunities",
+        "Iteration-wise admission probabilities"
+      ]
+    },
+    {
+      id: "state-engg",
+      title: "State Engineering Counselling",
+      icon: <BarChart4 className="w-10 h-10 text-rose-600" />,
+      color: "bg-rose-50 border-rose-200",
+      iconBg: "bg-rose-100",
+      textColor: "text-rose-700",
+      description: "State-specific engineering college recommendations based on state CETs and JEE Main scores.",
+      features: [
+        "Top state engineering colleges",
+        "Government & aided institutions focus",
+        "Regional language support available"
+      ]
+    },
+    {
+      id: "private-univ",
+      title: "Private Universities Report",
+      icon: <CheckSquare className="w-10 h-10 text-indigo-600" />,
+      color: "bg-indigo-50 border-indigo-200",
+      iconBg: "bg-indigo-100",
+      textColor: "text-indigo-700",
+      description: "Curated selection of top private universities with scholarship opportunities and admission pathways.",
+      features: [
+        "Scholarship & financial aid guidance",
+        "Direct admission opportunities",
+        "Specialization & placement comparisons"
+      ]
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
 
-      {/* Hero Banner */}
-      <section className="bg-gradient-to-r from-purple-700 to-indigo-800 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
+      {/* Hero Banner with animated elements */}
+      <section className="bg-gradient-to-r from-purple-700 to-indigo-800 text-white py-20 relative overflow-hidden">
+        {/* Animated background elements */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-white opacity-5 rounded-full translate-x-1/2 -translate-y-1/4 animate-pulse-slow"></div>
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-white opacity-5 rounded-full -translate-x-1/3 translate-y-1/3 animate-pulse-slow"></div>
+        
+        {/* Small floating particles */}
+        <div className="absolute inset-0">
+          {[...Array(8)].map((_, i) => (
+            <div 
+              key={i} 
+              className="absolute w-4 h-4 bg-white rounded-full opacity-20"
+              style={{
+                top: `${Math.random() * 100}%`,
+                left: `${Math.random() * 100}%`,
+                animation: `float ${4 + Math.random() * 4}s infinite ease-in-out ${Math.random() * 5}s`
+              }}
+            ></div>
+          ))}
+        </div>
+        
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <Badge className="mb-6 px-3 py-1 bg-white/20 backdrop-blur-sm text-white border-none">AI-Powered Guidance</Badge>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">AI-Generated Choice Filling Report</h1>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto mb-8 text-purple-100">
             Make smarter college selection decisions with our data-driven AI solution
           </p>
-          <Button size="lg" className="bg-white text-purple-700 hover:bg-purple-50 rounded-full px-8 py-6 text-lg shadow-xl">
-            Get Your Report Now
-          </Button>
+          
+          {/* Animated box showcasing AI report */}
+          <div className="max-w-4xl mx-auto mb-10 p-2 bg-white/10 backdrop-blur-sm rounded-2xl">
+            <div className="bg-purple-900/60 backdrop-blur-md p-6 rounded-xl relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-indigo-600/20"></div>
+              
+              <div className="relative z-10 flex flex-col md:flex-row items-center gap-6">
+                <div className="md:w-1/3 flex justify-center">
+                  <div className="relative">
+                    <div className="w-40 h-40 bg-purple-400/30 rounded-lg backdrop-blur flex items-center justify-center">
+                      <FileText className="w-20 h-20 text-white" strokeWidth={1} />
+                    </div>
+                    <div className="absolute -bottom-2 -right-2 w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center animate-bounce">
+                      <span className="text-xs font-bold text-purple-900">₹499</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="md:w-2/3 text-left">
+                  <h3 className="text-2xl font-bold mb-2">Data-Driven College Selection</h3>
+                  <ul className="mb-4 space-y-2">
+                    <li className="flex items-center gap-2">
+                      <CheckSquare className="w-5 h-5 text-green-300" />
+                      <span>Personalized to your rank, category & preferences</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckSquare className="w-5 h-5 text-green-300" />
+                      <span>Based on historical data & real-time trends</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckSquare className="w-5 h-5 text-green-300" />
+                      <span>Strategic filling order for maximum success</span>
+                    </li>
+                  </ul>
+                  <Button size="lg" className="bg-white text-purple-700 hover:bg-purple-50 rounded-full px-8 py-6 text-lg shadow-xl">
+                    Get Your Report Now
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Main Benefits */}
+      {/* Why AI Choice Filling */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -138,6 +287,59 @@ const AIChoiceFillingPage = () => {
                 </p>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* AI Report Types Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <Badge className="mb-2">Comprehensive Guidance</Badge>
+            <h2 className="text-3xl font-bold mb-4 text-gray-900">Choose Your AI Report Type</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              We offer specialized AI reports for different exams and counselling processes to ensure you get the most relevant guidance
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {examReports.map((report) => (
+              <Card key={report.id} className={`border-2 hover:shadow-xl transition-all ${report.color}`}>
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className={`${report.iconBg} p-3 rounded-lg`}>
+                      {report.icon}
+                    </div>
+                    <h3 className={`text-xl font-bold ${report.textColor}`}>{report.title}</h3>
+                  </div>
+                  
+                  <p className="text-gray-600 mb-4">{report.description}</p>
+                  
+                  <ul className="space-y-2 mb-6">
+                    {report.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start gap-2">
+                        <CheckSquare className="w-5 h-5 text-green-600 mt-0.5" />
+                        <span className="text-gray-700">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button 
+                        className={`w-full ${report.textColor.replace('text', 'bg')} hover:opacity-90 text-white`}
+                        onClick={() => setSelectedExam(report.title)}
+                      >
+                        Get Your AI Report
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className="sm:max-w-md">
+                      <AIReportForm examType={selectedExam || report.title} />
+                    </DialogContent>
+                  </Dialog>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -351,7 +553,7 @@ const AIChoiceFillingPage = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
             <div className="bg-gradient-to-r from-purple-600 to-indigo-700 p-8 text-white text-center">
@@ -442,7 +644,7 @@ const AIChoiceFillingPage = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4 text-gray-900">Frequently Asked Questions</h2>
@@ -493,6 +695,21 @@ const AIChoiceFillingPage = () => {
       </section>
 
       <Footer />
+      
+      {/* Add animation keyframes to tailwind config if needed */}
+      <style jsx global>{`
+        @keyframes float {
+          0%, 100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-10px);
+          }
+        }
+        .animate-pulse-slow {
+          animation: pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+      `}</style>
     </div>
   );
 };
