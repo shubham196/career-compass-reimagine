@@ -11,6 +11,9 @@ import CareerCounsellorPage from "./pages/CareerCounsellorPage";
 import IqTest10thGradePage from "./pages/IqTest10thGradePage";
 import IqTest11th12thGradePage from "./pages/IqTest11th12thGradePage";
 import AIChoiceFillingPage from "./pages/AIChoiceFillingPage";
+import ReportFormPage from "./pages/ReportFormPage";
+import PaymentPage from "./pages/PaymentPage";
+import PaymentSuccessPage from "./pages/PaymentSuccessPage";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +30,9 @@ const App = () => (
           <Route path="/iq-test-11th-12th-grade" element={<IqTest11th12thGradePage />} />
           <Route path="/career-counsellor" element={<CareerCounsellorPage />} />
           <Route path="/ai-choice-filling" element={<AIChoiceFillingPage />} />
+          <Route path="/report-form" element={<ReportFormPage />} />
+          <Route path="/payment-page" element={<PaymentPage />} />
+          <Route path="/payment-success" element={<PaymentSuccessPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
