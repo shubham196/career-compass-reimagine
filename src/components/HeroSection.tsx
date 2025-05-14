@@ -1,7 +1,8 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { Calendar, Star } from "lucide-react";
+import { Star, FileText } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -66,27 +67,31 @@ const HeroSection = () => {
             <div className="relative">
               <div className="bg-white rounded-2xl shadow-xl p-6 border border-gray-100 max-w-md mx-auto">
                 <div className="flex justify-between items-center mb-6">
-                  <h3 className="text-xl font-semibold text-purple-700">FREE WEBINAR</h3>
-                  <span className="text-sm text-gray-500">Seats Filling Fast!</span>
+                  <h3 className="text-xl font-semibold text-purple-700">AI CHOICE FILLING REPORT</h3>
+                  <span className="text-sm text-gray-500">Instant Access!</span>
                 </div>
                 
                 <div className="mb-6">
-                  <Calendar className="w-full h-48 mb-4 text-purple-600 opacity-90" />
+                  <div className="flex justify-center mb-4">
+                    <FileText className="w-32 h-32 text-purple-600" strokeWidth={1.5} />
+                  </div>
                   <p className="text-center text-gray-700 mb-2">
-                    Save Your Seat Today
+                    Data-driven college & branch suggestions
                   </p>
                   <p className="text-center text-sm text-gray-500">
-                    Join 2000+ students for FREE career guidance
+                    Based on your rank, category & real-time trends
                   </p>
                 </div>
                 
-                <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white rounded-full py-5 text-lg">
-                  Register Now
-                </Button>
+                <Link to="/ai-choice-filling">
+                  <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white rounded-full py-5 text-lg">
+                    Get Your AI Report
+                  </Button>
+                </Link>
               </div>
               
               <div className="absolute -top-3 -right-3 w-16 h-16 bg-yellow-300 rounded-full flex items-center justify-center animate-pulse-slow">
-                <span className="text-xs font-bold text-purple-900 text-center leading-tight">FREE<br />ACCESS</span>
+                <span className="text-xs font-bold text-purple-900 text-center leading-tight">₹499<br />ONLY</span>
               </div>
             </div>
           </div>
