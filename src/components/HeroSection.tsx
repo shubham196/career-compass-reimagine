@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { Star, FileText, CheckCircle, BarChart4, BookOpen } from "lucide-react";
+import { Star, FileText, CheckCircle, BarChart4, BookOpen, Target, Compass } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const HeroSection = () => {
@@ -15,13 +15,13 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="relative z-10">
             <div className="inline-block px-3 py-1 mb-5 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">
-              #1 Career Counselling Platform
+              NEET | JEE | CUET | State Counselling
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900 leading-tight">
-              Complete <span className="text-purple-600">Handholding</span> for Career Counselling Guidance
+              Get Your <span className="text-purple-600">Dream College</span> with AI-Powered Choice Filling
             </h1>
             <p className="text-lg mb-8 text-gray-600 max-w-lg">
-              We guide every student through all stages of career planning, from self-assessment to admission guidance.
+              Don't miss your chance! Get expert-level choice filling suggestions using our AI engine – based on your rank, category, and past cutoffs. Save hours and avoid costly mistakes.
             </p>
             
             <div className="flex flex-wrap items-center gap-3 mb-8">
@@ -54,16 +54,18 @@ const HeroSection = () => {
             </div>
             
             <div className="flex flex-wrap gap-4">
-              <Button className="bg-purple-600 hover:bg-purple-700 text-white rounded-full px-8 py-6 text-lg">
-                Explore Features
-              </Button>
+              <Link to="/ai-choice-filling">
+                <Button className="bg-purple-600 hover:bg-purple-700 text-white rounded-full px-8 py-6 text-lg">
+                  Get My AI College Plan Instantly
+                </Button>
+              </Link>
               <Button variant="outline" className="rounded-full px-8 py-6 text-lg border-gray-300 hover:border-purple-600 hover:text-purple-600">
-                Book a Session
+                Learn More
               </Button>
             </div>
           </div>
           
-          {/* AI Choice Filling Report card based on Figma specifications */}
+          {/* AI Choice Filling Report card */}
           <div className="relative z-10">
             <div className="w-full max-w-[480px] mx-auto bg-[#F9F5FF] rounded-2xl shadow-[0px_4px_16px_rgba(0,0,0,0.05)] p-6 transform transition-all duration-300 hover:shadow-lg">
               {/* Card Header */}
@@ -77,10 +79,10 @@ const HeroSection = () => {
                 {/* Feature 1 */}
                 <div className="flex items-start gap-3">
                   <div className="w-10 h-10 rounded-full bg-[#F3E8FF] flex items-center justify-center flex-shrink-0">
-                    <CheckCircle className="w-5 h-5 text-[#9333EA]" />
+                    <Target className="w-5 h-5 text-[#9333EA]" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-800 text-sm">Smart College Picks</h4>
+                    <h4 className="font-bold text-gray-800 text-sm">College Matches</h4>
                     <p className="text-xs text-gray-500">Based on rank, category & preferences</p>
                   </div>
                 </div>
@@ -92,18 +94,18 @@ const HeroSection = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-gray-800 text-sm">Branch Insights</h4>
-                    <p className="text-xs text-gray-500">Explore placement stats & future scope</p>
+                    <p className="text-xs text-gray-500">Placement stats & future scope</p>
                   </div>
                 </div>
                 
                 {/* Feature 3 */}
                 <div className="flex items-start gap-3">
                   <div className="w-10 h-10 rounded-full bg-[#F3E8FF] flex items-center justify-center flex-shrink-0">
-                    <BookOpen className="w-5 h-5 text-[#9333EA]" />
+                    <Compass className="w-5 h-5 text-[#9333EA]" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-800 text-sm">Counselling Strategy</h4>
-                    <p className="text-xs text-gray-500">Round-wise list to boost chances</p>
+                    <h4 className="font-bold text-gray-800 text-sm">Smart Ordering</h4>
+                    <p className="text-xs text-gray-500">Strategic choice list ordering</p>
                   </div>
                 </div>
                 
