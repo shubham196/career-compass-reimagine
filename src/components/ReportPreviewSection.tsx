@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
@@ -105,9 +106,10 @@ const ReportPreviewSection = () => {
                       <h4 className="font-semibold text-gray-800">Trend Analysis</h4>
                       <p className="text-gray-600">Five-year historical data analysis to predict this year's cut-offs with remarkable accuracy.</p>
                     </div>
-                    
-                    <div className="flex items-start gap-3 bg-gray-50 p-4 rounded-lg transform transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-                      <Badge className="mt-1 bg-theme-primary/20 text-theme-secondary h-8 w-8 flex items-center justify-center p-0 text-base">3</Badge>
+                  </div>
+                  
+                  <div className="flex items-start gap-3 bg-gray-50 p-4 rounded-lg transform transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+                    <Badge className="mt-1 bg-theme-primary/20 text-theme-secondary h-8 w-8 flex items-center justify-center p-0 text-base">3</Badge>
                     <div>
                       <h4 className="font-semibold text-gray-800">Fee Breakdown</h4>
                       <p className="text-gray-600">Complete college-wise fee structures including tuition, hostel, mess, and additional expenses.</p>
