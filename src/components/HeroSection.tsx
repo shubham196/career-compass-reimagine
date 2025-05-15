@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { Star, FileText } from "lucide-react";
+import { Star, FileText, CheckCircle, BarChart4, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const HeroSection = () => {
@@ -63,57 +63,84 @@ const HeroSection = () => {
             </div>
           </div>
           
+          {/* AI Choice Filling Report card based on Figma specifications */}
           <div className="relative z-10">
-            <div className="relative">
-              <div className="bg-white rounded-2xl shadow-xl p-6 border border-gray-100 max-w-md mx-auto">
-                <div className="flex justify-between items-center mb-6">
-                  <h3 className="text-xl font-semibold text-purple-700">AI CHOICE FILLING REPORT</h3>
-                  <span className="text-sm text-gray-500">Instant Access!</span>
-                </div>
-                
-                <div className="mb-6 relative overflow-hidden rounded-lg">
-                  <div className="flex justify-center mb-4 relative">
-                    {/* Animated GIF showing AI report with pulse effect */}
-                    <div className="w-full h-60 bg-gray-100 rounded-lg overflow-hidden">
-                      <div className="relative w-full h-full">
-                        <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-indigo-400/20 animate-pulse"></div>
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <div className="w-32 h-32 rounded-full bg-purple-600/10 animate-ping"></div>
-                        </div>
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <FileText className="w-20 h-20 text-purple-600" strokeWidth={1.5} />
-                        </div>
-                        <div className="absolute bottom-4 left-0 right-0 text-center">
-                          <span className="px-4 py-1 bg-purple-600 text-white text-xs font-bold rounded-full animate-bounce">
-                            AI Powered
-                          </span>
-                        </div>
-                      </div>
-                    </div>
+            <div className="w-full max-w-[480px] mx-auto bg-[#F9F5FF] rounded-2xl shadow-[0px_4px_16px_rgba(0,0,0,0.05)] p-6 transform transition-all duration-300 hover:shadow-lg">
+              {/* Card Header */}
+              <div className="mb-6">
+                <h3 className="text-[22px] font-semibold text-[#7E22CE] mb-1 font-inter">AI Choice Filling Report</h3>
+                <p className="text-[14px] text-[#6B7280]">Your Personalized College List – Delivered Instantly</p>
+              </div>
+              
+              {/* Features Grid */}
+              <div className="grid grid-cols-2 gap-5 mb-6">
+                {/* Feature 1 */}
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-full bg-[#F3E8FF] flex items-center justify-center flex-shrink-0">
+                    <CheckCircle className="w-5 h-5 text-[#9333EA]" />
                   </div>
-                  <p className="text-center text-gray-700 mb-2 font-bold">
-                    Data-driven college & branch suggestions
-                  </p>
-                  <p className="text-center text-sm text-gray-500">
-                    Based on your rank, category & real-time trends
-                  </p>
+                  <div>
+                    <h4 className="font-bold text-gray-800 text-sm">Smart College Picks</h4>
+                    <p className="text-xs text-gray-500">Based on rank, category & preferences</p>
+                  </div>
                 </div>
                 
+                {/* Feature 2 */}
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-full bg-[#F3E8FF] flex items-center justify-center flex-shrink-0">
+                    <BarChart4 className="w-5 h-5 text-[#9333EA]" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-800 text-sm">Branch Insights</h4>
+                    <p className="text-xs text-gray-500">Explore placement stats & future scope</p>
+                  </div>
+                </div>
+                
+                {/* Feature 3 */}
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-full bg-[#F3E8FF] flex items-center justify-center flex-shrink-0">
+                    <BookOpen className="w-5 h-5 text-[#9333EA]" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-800 text-sm">Counselling Strategy</h4>
+                    <p className="text-xs text-gray-500">Round-wise list to boost chances</p>
+                  </div>
+                </div>
+                
+                {/* Feature 4 */}
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-full bg-[#F3E8FF] flex items-center justify-center flex-shrink-0">
+                    <FileText className="w-5 h-5 text-[#9333EA]" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-800 text-sm">Instant PDF</h4>
+                    <p className="text-xs text-gray-500">Delivered to your email instantly</p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Offer Section */}
+              <div className="mb-6 bg-[#FEF9C3] p-4 rounded-lg flex items-center justify-between">
+                <p className="font-medium text-[16px] text-[#92400E]">Limited Time Offer – Just ₹499</p>
+                <div className="w-[60px] h-[60px] bg-[#FACC15] rounded-full flex items-center justify-center shadow-md">
+                  <div className="text-center leading-tight">
+                    <span className="text-xs font-bold block">ONLY</span>
+                    <span className="text-sm font-bold">₹499</span>
+                  </div>
+                </div>
+              </div>
+              
+              {/* CTA Section */}
+              <div>
+                <p className="text-center font-bold text-[16px] mb-4" style={{ background: "linear-gradient(90deg, #BB53CC, #8E24AA)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+                  Don't Guess Your College – Predict It!
+                </p>
                 <Link to="/ai-choice-filling">
-                  <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white rounded-full py-5 text-lg group transition-all duration-300">
-                    <span>Get Your AI Report</span>
-                    <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
+                  <Button className="w-full bg-[#8B5CF6] hover:bg-[#7C3AED] text-white font-bold py-3 px-5 rounded-lg shadow-md text-[16px]">
+                    🎯 Get My AI Report Now
                   </Button>
                 </Link>
               </div>
-              
-              <div className="absolute -top-3 -right-3 w-16 h-16 bg-yellow-300 rounded-full flex items-center justify-center animate-pulse">
-                <span className="text-xs font-bold text-purple-900 text-center leading-tight">₹499<br />ONLY</span>
-              </div>
-              
-              {/* Added floating elements for visual appeal */}
-              <div className="absolute -bottom-6 -left-6 w-12 h-12 bg-purple-200 rounded-full animate-bounce delay-100"></div>
-              <div className="absolute -top-8 right-16 w-8 h-8 bg-yellow-200 rounded-full animate-bounce delay-300"></div>
             </div>
           </div>
         </div>
