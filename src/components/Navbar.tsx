@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Search, Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,20 +15,21 @@ const Navbar = () => {
     <nav className="bg-white shadow-sm py-4 sticky top-0 z-50">
       <div className="container mx-auto px-4 flex items-center justify-between">
         <div className="flex items-center">
-          <a href="/" className="flex items-center">
+          <Link to="/" className="flex items-center">
             <div className="w-10 h-10 rounded-full bg-gradient-to-r from-purple-600 to-purple-800 flex items-center justify-center mr-2">
               <span className="text-white font-bold text-lg">CC</span>
             </div>
             <span className="font-poppins font-semibold text-lg text-gray-900">Career<span className="text-purple-600">Compass</span></span>
-          </a>
+          </Link>
         </div>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
           <a href="#features" className="font-medium text-gray-700 hover:text-purple-600 transition-colors">Features</a>
           <a href="#colleges" className="font-medium text-gray-700 hover:text-purple-600 transition-colors">Colleges</a>
+          <Link to="/iq-test" className="font-medium text-gray-700 hover:text-purple-600 transition-colors">IQ Test</Link>
+          <Link to="/career-counsellor" className="font-medium text-gray-700 hover:text-purple-600 transition-colors">Career Counsellor</Link>
           <a href="#news" className="font-medium text-gray-700 hover:text-purple-600 transition-colors">News</a>
-          <a href="#faqs" className="font-medium text-gray-700 hover:text-purple-600 transition-colors">FAQs</a>
           <a href="#contact" className="font-medium text-gray-700 hover:text-purple-600 transition-colors">Contact</a>
         </div>
 
@@ -54,8 +56,9 @@ const Navbar = () => {
           <div className="flex flex-col space-y-3 pt-3 pb-4">
             <a href="#features" className="font-medium text-gray-800 hover:text-purple-600 transition-colors py-2 px-4 rounded-lg hover:bg-gray-50">Features</a>
             <a href="#colleges" className="font-medium text-gray-800 hover:text-purple-600 transition-colors py-2 px-4 rounded-lg hover:bg-gray-50">Colleges</a>
+            <Link to="/iq-test" className="font-medium text-gray-800 hover:text-purple-600 transition-colors py-2 px-4 rounded-lg hover:bg-gray-50">IQ Test</Link>
+            <Link to="/career-counsellor" className="font-medium text-gray-800 hover:text-purple-600 transition-colors py-2 px-4 rounded-lg hover:bg-gray-50">Career Counsellor</Link>
             <a href="#news" className="font-medium text-gray-800 hover:text-purple-600 transition-colors py-2 px-4 rounded-lg hover:bg-gray-50">News</a>
-            <a href="#faqs" className="font-medium text-gray-800 hover:text-purple-600 transition-colors py-2 px-4 rounded-lg hover:bg-gray-50">FAQs</a>
             <a href="#contact" className="font-medium text-gray-800 hover:text-purple-600 transition-colors py-2 px-4 rounded-lg hover:bg-gray-50">Contact</a>
             <Button className="bg-purple-600 hover:bg-purple-700 text-white w-full rounded-full mt-3">
               Sign Up Free
