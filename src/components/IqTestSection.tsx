@@ -6,6 +6,7 @@ import { Brain, Download, FileText, Award } from "lucide-react";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
+import IqTestIllustration from "./IqTestIllustration";
 
 const IqTestSection = () => {
   return (
@@ -100,11 +101,12 @@ const IqTestSection = () => {
           <div className="relative">
             <div className="absolute -z-10 w-72 h-72 bg-purple-100 rounded-full top-12 -right-8 animate-pulse-slow"></div>
             <div className="absolute -z-10 w-48 h-48 bg-yellow-100 rounded-full bottom-12 -left-6 animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
-            <img 
-              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-              alt="Student taking IQ test" 
-              className="rounded-2xl shadow-2xl max-w-full mx-auto animate-float relative z-10 border-4 border-white"
-            />
+            
+            {/* SVG Illustration replacing image */}
+            <div className="relative z-10">
+              <IqTestIllustration />
+            </div>
+            
             <div className="absolute bottom-6 left-10 bg-white rounded-xl shadow-lg p-4 animate-float z-20" style={{ animationDelay: '0.5s' }}>
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center">
@@ -124,3 +126,4 @@ const IqTestSection = () => {
 };
 
 export default IqTestSection;
+

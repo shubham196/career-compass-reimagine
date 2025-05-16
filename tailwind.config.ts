@@ -84,6 +84,10 @@ export default {
 					300: '#FDE047',
 					400: '#FACC15',
 					500: '#EAB308',
+				},
+				theme: {
+					primary: '#BB53CC',
+					secondary: '#8E24AA',
 				}
 			},
 			borderRadius: {
@@ -122,6 +126,9 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'float': 'float 6s ease-in-out infinite',
 				'pulse-slow': 'pulse-slow 3s ease-in-out infinite',
+			},
+			backgroundImage: {
+				'theme-gradient': 'linear-gradient(90deg, #BB53CC, #8E24AA)',
 			}
 		}
 	},
