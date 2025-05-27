@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import AIChoiceFillingHero from "@/components/AIChoiceFillingHero";
 import SampleAIReportSection from "@/components/SampleAIReportSection";
 import Footer from "@/components/Footer";
+import StickyFooter from "@/components/StickyFooter";
 
 const AIChoiceFillingPage = () => {
   return (
@@ -12,6 +13,7 @@ const AIChoiceFillingPage = () => {
       <AIChoiceFillingHero />
       <SampleAIReportSection />
       <Footer />
+      <StickyFooter />
     </div>
   );
 };
