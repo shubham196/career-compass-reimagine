@@ -9,9 +9,9 @@ const Footer = () => {
           <div>
             <div className="flex items-center mb-6">
               <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center mr-2">
-                <span className="text-purple-800 font-bold text-lg">CC</span>
+                <span className="text-purple-800 font-bold text-lg">CM</span>
               </div>
-              <span className="font-poppins font-semibold text-lg">Career<span className="text-yellow-300">Compass</span></span>
+              <span className="font-poppins font-semibold text-lg">Career<span className="text-yellow-300">Mantrana</span></span>
             </div>
             
             <p className="text-purple-200 mb-6 text-sm">
@@ -47,25 +47,25 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4">Explore</h3>
+            <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-3">
-              <li><a href="#features" className="text-purple-200 hover:text-white transition-colors">Features</a></li>
-              <li><a href="#colleges" className="text-purple-200 hover:text-white transition-colors">Top Colleges</a></li>
-              <li><a href="#news" className="text-purple-200 hover:text-white transition-colors">Latest News</a></li>
-              <li><a href="#" className="text-purple-200 hover:text-white transition-colors">Exams</a></li>
-              <li><a href="#" className="text-purple-200 hover:text-white transition-colors">Career Library</a></li>
-              <li><a href="#" className="text-purple-200 hover:text-white transition-colors">Scholarships</a></li>
+              <li><a href="#" className="text-purple-200 hover:text-white transition-colors">Career Counselling</a></li>
+              <li><a href="#" className="text-purple-200 hover:text-white transition-colors">Psychometric Assessment</a></li>
+              <li><a href="#" className="text-purple-200 hover:text-white transition-colors">College Selection</a></li>
+              <li><a href="#" className="text-purple-200 hover:text-white transition-colors">Course Guidance</a></li>
+              <li><a href="#" className="text-purple-200 hover:text-white transition-colors">Career Planning</a></li>
+              <li><a href="#" className="text-purple-200 hover:text-white transition-colors">Skill Development</a></li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4">Resources</h3>
+            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-purple-200 hover:text-white transition-colors">Blog</a></li>
-              <li><a href="#" className="text-purple-200 hover:text-white transition-colors">Guides</a></li>
-              <li><a href="#faqs" className="text-purple-200 hover:text-white transition-colors">FAQs</a></li>
               <li><a href="#" className="text-purple-200 hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#contact" className="text-purple-200 hover:text-white transition-colors">Contact</a></li>
+              <li><a href="#" className="text-purple-200 hover:text-white transition-colors">Our Team</a></li>
+              <li><a href="#" className="text-purple-200 hover:text-white transition-colors">Testimonials</a></li>
+              <li><a href="#" className="text-purple-200 hover:text-white transition-colors">Blog</a></li>
+              <li><a href="#contact" className="text-purple-200 hover:text-white transition-colors">Contact Us</a></li>
               <li><a href="#" className="text-purple-200 hover:text-white transition-colors">Privacy Policy</a></li>
             </ul>
           </div>
@@ -94,7 +94,7 @@ const Footer = () => {
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                   <polyline points="22,6 12,13 2,6"></polyline>
                 </svg>
-                <span className="text-purple-200">info@careercompass.com</span>
+                <span className="text-purple-200">info@careermantrana.com</span>
               </li>
             </ul>
           </div>
@@ -105,7 +105,7 @@ const Footer = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-between items-center">
             <p className="text-purple-300 text-sm">
-              © {new Date().getFullYear()} Career Compass. All rights reserved.
+              © {new Date().getFullYear()} Career Mantrana. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 sm:mt-0">
               <a href="#" className="text-purple-300 text-sm hover:text-white">Terms</a>
