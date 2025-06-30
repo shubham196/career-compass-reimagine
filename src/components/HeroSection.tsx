@@ -14,17 +14,66 @@ const HeroSection = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="relative z-10">
-            <div className="inline-block px-3 py-1 mb-5 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">
-              #1 Career Counselling Platform
+            {/* Main heading with counselling session offer */}
+            <div className="mb-8">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900 leading-tight">
+                Get a <span className="bg-purple-600 text-white px-4 py-2 rounded-2xl">15 min 1-on-1</span> 
+                <span className="block mt-2 text-purple-600">Counselling session</span>
+                <span className="block text-gray-900">from our experts</span>
+              </h1>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900 leading-tight">
-              Complete <span className="text-purple-600">Handholding</span> for Career Counselling Guidance
-            </h1>
-            <p className="text-lg mb-8 text-gray-600 max-w-lg">
-              We guide every student through all stages of career planning, from self-assessment to admission guidance.
-            </p>
             
-            <div className="flex flex-wrap items-center gap-3 mb-8">
+            {/* Service features list */}
+            <div className="space-y-4 mb-8">
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 rounded-full bg-purple-600 mt-3 flex-shrink-0"></div>
+                <p className="text-lg text-gray-700">
+                  Analysis of your academic score, entrance rank, reservation category.
+                </p>
+              </div>
+              
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 rounded-full bg-purple-600 mt-3 flex-shrink-0"></div>
+                <p className="text-lg text-gray-700">
+                  Positioning you in the "realistic vs aspirational" college list.
+                </p>
+              </div>
+              
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 rounded-full bg-purple-600 mt-3 flex-shrink-0"></div>
+                <p className="text-lg text-gray-700">
+                  Get help choosing colleges based on key parameters.
+                </p>
+              </div>
+              
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 rounded-full bg-purple-600 mt-3 flex-shrink-0"></div>
+                <p className="text-lg text-gray-700">
+                  Transparent discussion on career options, costs, relocation, and alternatives.
+                </p>
+              </div>
+              
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 rounded-full bg-purple-600 mt-3 flex-shrink-0"></div>
+                <p className="text-lg text-gray-700">
+                  FAQs.
+                </p>
+              </div>
+            </div>
+            
+            {/* Pricing and CTA */}
+            <div className="flex flex-wrap items-center gap-4 mb-8">
+              <div className="bg-yellow-400 text-black px-6 py-3 rounded-2xl font-bold text-xl">
+                <span className="line-through text-gray-600 text-lg">Rs. 1199/-</span>
+                <span className="block">Rs. 999/- only</span>
+              </div>
+              <Button className="bg-purple-600 hover:bg-purple-700 text-white rounded-full px-8 py-6 text-lg">
+                Book Session Now
+              </Button>
+            </div>
+            
+            {/* Trust indicators */}
+            <div className="flex flex-wrap items-center gap-3">
               <div className="flex items-center gap-1">
                 <div className="flex">
                   {[1, 2, 3, 4, 5].map((star) => (
@@ -37,29 +86,6 @@ const HeroSection = () => {
               <div className="flex items-center">
                 <span className="text-sm font-medium">Trusted by 250k+ students</span>
               </div>
-              <div className="h-4 w-0.5 bg-gray-300"></div>
-              <div className="flex items-center gap-1">
-                <div className="flex -space-x-2">
-                  {[1, 2, 3, 4].map((item) => (
-                    <div key={item} className="w-6 h-6 rounded-full bg-gray-200 border-2 border-white"></div>
-                  ))}
-                </div>
-                <span className="text-sm font-medium">Google</span>
-                <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-              </div>
-            </div>
-            
-            <div className="flex flex-wrap gap-4">
-              <Button className="bg-purple-600 hover:bg-purple-700 text-white rounded-full px-8 py-6 text-lg">
-                Explore Features
-              </Button>
-              <Button variant="outline" className="rounded-full px-8 py-6 text-lg border-gray-300 hover:border-purple-600 hover:text-purple-600">
-                Book a Session
-              </Button>
             </div>
           </div>
           
