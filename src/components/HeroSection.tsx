@@ -14,117 +14,99 @@ const HeroSection = () => {
       
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-          {/* Left Side - VR Inspired Hero Design */}
+          {/* Left Side - Updated Content */}
           <div className="relative z-10">
-            <div className="relative bg-gradient-to-br from-purple-800 via-purple-700 to-purple-900 rounded-3xl p-8 max-w-[500px] overflow-hidden">
+            <div className="relative bg-theme-gradient rounded-3xl p-8 max-w-[500px] overflow-hidden">
               {/* Abstract Background Patterns */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-600/30 to-transparent rounded-full blur-2xl"></div>
-              <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-yellow-400/20 to-transparent rounded-full blur-xl"></div>
-              <div className="absolute top-1/2 left-1/2 w-16 h-16 bg-gradient-to-br from-purple-500/20 to-transparent rounded-full blur-lg"></div>
-              
-              {/* Top Left Brand Badge */}
-              <div className="absolute top-6 left-6">
-                <div className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center">
-                  <GraduationCap className="w-6 h-6 text-yellow-300" />
-                </div>
-              </div>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-white/10 to-transparent rounded-full blur-2xl"></div>
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-white/20 to-transparent rounded-full blur-xl"></div>
+              <div className="absolute top-1/2 left-1/2 w-16 h-16 bg-gradient-to-br from-white/10 to-transparent rounded-full blur-lg"></div>
               
               {/* Main Content */}
-              <div className="relative pt-16 space-y-6">
+              <div className="relative space-y-6">
                 {/* Main Heading */}
                 <div>
                   <h1 className="text-3xl md:text-4xl font-bold leading-tight text-white font-poppins">
-                    Elevate Your College
+                    Get a <span className="text-yellow-300">15 min 1-on-1</span>
                     <br />
-                    <span className="text-yellow-300">
-                      Admission Journey
-                    </span>
+                    Counselling Session
+                    <br />
+                    from our experts
                   </h1>
                 </div>
                 
-                {/* Subheading */}
-                <p className="text-purple-100 text-base leading-relaxed">
-                  Book expert counselling sessions to secure your dream college.
-                </p>
-                
-                {/* Benefits List - Two Column Grid */}
-                <div className="grid grid-cols-1 gap-3">
-                  <div className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full bg-yellow-300 flex items-center justify-center flex-shrink-0">
-                      <BarChart4 className="w-3 h-3 text-purple-800" />
+                {/* Benefits List */}
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-purple-200 flex items-center justify-center flex-shrink-0 mt-1">
+                      <BarChart4 className="w-3.5 h-3.5 text-purple-700" />
                     </div>
-                    <span className="text-white text-sm">Personalised Score & Rank Analysis</span>
+                    <span className="text-white text-sm leading-relaxed">
+                      Analysis of your academic score, entrance rank, reservation category.
+                    </span>
                   </div>
                   
-                  <div className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full bg-yellow-300 flex items-center justify-center flex-shrink-0">
-                      <Target className="w-3 h-3 text-purple-800" />
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-purple-200 flex items-center justify-center flex-shrink-0 mt-1">
+                      <Target className="w-3.5 h-3.5 text-purple-700" />
                     </div>
-                    <span className="text-white text-sm">Realistic vs Aspirational College List</span>
+                    <span className="text-white text-sm leading-relaxed">
+                      Positioning you in the 'realistic vs aspirational' college list.
+                    </span>
                   </div>
                   
-                  <div className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full bg-yellow-300 flex items-center justify-center flex-shrink-0">
-                      <GraduationCap className="w-3 h-3 text-purple-800" />
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-purple-200 flex items-center justify-center flex-shrink-0 mt-1">
+                      <GraduationCap className="w-3.5 h-3.5 text-purple-700" />
                     </div>
-                    <span className="text-white text-sm">Expert Admission Strategies</span>
+                    <span className="text-white text-sm leading-relaxed">
+                      Get help choosing colleges based on key parameters.
+                    </span>
                   </div>
                   
-                  <div className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full bg-yellow-300 flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-3 h-3 text-purple-800" />
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-purple-200 flex items-center justify-center flex-shrink-0 mt-1">
+                      <MessageCircle className="w-3.5 h-3.5 text-purple-700" />
                     </div>
-                    <span className="text-white text-sm">Transparent Cost & Relocation Guidance</span>
+                    <span className="text-white text-sm leading-relaxed">
+                      Transparent discussion on career options, costs, relocation, and alternatives.
+                    </span>
                   </div>
                   
-                  <div className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full bg-yellow-300 flex items-center justify-center flex-shrink-0">
-                      <MessageCircle className="w-3 h-3 text-purple-800" />
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-purple-200 flex items-center justify-center flex-shrink-0 mt-1">
+                      <Headset className="w-3.5 h-3.5 text-purple-700" />
                     </div>
-                    <span className="text-white text-sm">Quick FAQs & Doubt Resolution</span>
+                    <span className="text-white text-sm leading-relaxed">
+                      FAQs.
+                    </span>
                   </div>
                 </div>
                 
                 {/* CTA Button */}
                 <div className="pt-4">
-                  <Button className="bg-white text-purple-800 hover:bg-purple-50 rounded-full px-8 py-3 text-base font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 w-full max-w-xs">
-                    <Calendar className="w-5 h-5 mr-2" />
-                    Book Your Session
+                  <Button className="bg-white text-purple-800 hover:bg-purple-50 rounded-full px-8 py-3 text-base font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200">
+                    Book a Session
                   </Button>
                 </div>
                 
                 {/* Trust Signal */}
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-6 pt-4">
                   <div>
-                    <div className="text-yellow-300 text-2xl font-bold">98%</div>
-                    <div className="text-purple-100 text-xs">Student Satisfaction</div>
+                    <div className="text-white text-2xl font-bold">10k+</div>
+                    <div className="text-purple-100 text-xs">Sessions Conducted</div>
                   </div>
-                  <div className="h-8 w-px bg-purple-600"></div>
-                  <div className="text-purple-100 text-sm">
-                    <span className="font-semibold text-white">10k+</span> sessions conducted
-                  </div>
-                </div>
-              </div>
-              
-              {/* Student Illustration Area */}
-              <div className="absolute -right-8 -bottom-8 w-32 h-32 opacity-20">
-                <div className="relative w-full h-full">
-                  {/* Student silhouette placeholder */}
-                  <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-white/20 to-white/10 flex items-center justify-center">
-                    <User className="w-12 h-12 text-white/60" />
-                  </div>
-                  
-                  {/* Floating Icons */}
-                  <div className="absolute -top-2 -left-2 w-6 h-6 rounded-full bg-yellow-300 flex items-center justify-center animate-bounce-gentle">
-                    <GraduationCap className="w-3 h-3 text-purple-800" />
-                  </div>
-                  
-                  <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-yellow-300 flex items-center justify-center animate-bounce-gentle animation-delay-150">
-                    <Building2 className="w-3 h-3 text-purple-800" />
-                  </div>
-                  
-                  <div className="absolute -bottom-2 -left-2 w-6 h-6 rounded-full bg-yellow-300 flex items-center justify-center animate-bounce-gentle animation-delay-300">
-                    <TrendingUp className="w-3 h-3 text-purple-800" />
+                  <div className="flex items-center gap-2">
+                    <div className="flex items-center">
+                      {[...Array(4)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 text-yellow-300 fill-current" />
+                      ))}
+                      <Star className="w-4 h-4 text-yellow-300 fill-current opacity-50" />
+                    </div>
+                    <div className="text-white text-sm">
+                      <span className="font-semibold">4.9/5</span>
+                      <span className="text-purple-100"> | 194 Reviews</span>
+                    </div>
                   </div>
                 </div>
               </div>
