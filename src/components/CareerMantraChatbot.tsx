@@ -3,12 +3,28 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { Send, Bot, User } from "lucide-react";
+import CollegeInfoCard from "./CollegeInfoCard";
 
 interface Message {
   id: string;
   text: string;
   isBot: boolean;
   timestamp: Date;
+  type?: 'text' | 'college-card';
+  collegeData?: {
+    name: string;
+    location: string;
+    state: string;
+    totalBranches: number;
+    topBranches: {
+      name: string;
+      ranks: {
+        year: string;
+        rank: string;
+      }[];
+    }[];
+    establishedYear?: number;
+  };
 }
 
 const CareerMantraChatbot = () => {
@@ -92,15 +108,49 @@ const CareerMantraChatbot = () => {
     setInputValue("");
     setIsTyping(true);
 
-    // Simulate AI response delay
+    // Simulate AI response with college card for demonstration
     setTimeout(() => {
-      const botResponse: Message = {
+      const textResponse: Message = {
         id: (Date.now() + 1).toString(),
-        text: "That's a great question! 🎯 Based on your interests, I can see you're thinking about your future carefully. Let me help you explore some career paths that might align with your **passions** and **strengths**.\n\n✨ Would you like to take our **psychometric test** to get personalized career recommendations? It will help us understand your personality better and suggest the most suitable career options for you! 📊😊",
+        text: "Great! 🎯 Based on your interests in **engineering and technology**, here's a college that might be perfect for you:",
         isBot: true,
         timestamp: new Date(),
       };
-      setMessages(prev => [...prev, botResponse]);
+
+      const collegeResponse: Message = {
+        id: (Date.now() + 2).toString(),
+        text: "",
+        isBot: true,
+        timestamp: new Date(),
+        type: 'college-card',
+        collegeData: {
+          name: "COEP Technological University",
+          location: "Pune",
+          state: "Maharashtra",
+          totalBranches: 9,
+          establishedYear: 1854,
+          topBranches: [
+            {
+              name: "Computer Engineering",
+              ranks: [
+                { year: "2022", rank: "86" },
+                { year: "2023", rank: "98" },
+                { year: "2024", rank: "117" }
+              ]
+            },
+            {
+              name: "Robotics and Artificial Intelligence",
+              ranks: [
+                { year: "2022", rank: "N/A" },
+                { year: "2023", rank: "514" },
+                { year: "2024", rank: "369" }
+              ]
+            }
+          ]
+        }
+      };
+
+      setMessages(prev => [...prev, textResponse, collegeResponse]);
       setIsTyping(false);
     }, 1500);
   };
@@ -140,30 +190,45 @@ const CareerMantraChatbot = () => {
               </div>
             )}
             
-            <div
-              className={`max-w-xs lg:max-w-md px-4 py-3 rounded-2xl ${
-                message.isBot
-                  ? "bg-white border border-gray-200 text-gray-800"
-                  : "bg-purple-600 text-white"
-              }`}
-            >
+            {message.type === 'college-card' && message.collegeData ? (
+              <div className="max-w-md w-full">
+                <CollegeInfoCard 
+                  college={message.collegeData} 
+                  onViewMore={() => console.log('View more clicked')}
+                />
+                <div className="text-xs text-gray-500 opacity-70 mt-2 text-center">
+                  {message.timestamp.toLocaleTimeString([], {
+                    hour: "2-digit",
+                    minute: "2-digit",
+                  })}
+                </div>
+              </div>
+            ) : (
               <div
-                className="text-sm leading-relaxed"
-                dangerouslySetInnerHTML={{
-                  __html: formatMessage(message.text),
-                }}
-              />
-              <div
-                className={`text-xs mt-2 opacity-70 ${
-                  message.isBot ? "text-gray-500" : "text-purple-100"
+                className={`max-w-xs lg:max-w-md px-4 py-3 rounded-2xl ${
+                  message.isBot
+                    ? "bg-white border border-gray-200 text-gray-800"
+                    : "bg-purple-600 text-white"
                 }`}
               >
-                {message.timestamp.toLocaleTimeString([], {
-                  hour: "2-digit",
-                  minute: "2-digit",
-                })}
+                <div
+                  className="text-sm leading-relaxed"
+                  dangerouslySetInnerHTML={{
+                    __html: formatMessage(message.text),
+                  }}
+                />
+                <div
+                  className={`text-xs mt-2 opacity-70 ${
+                    message.isBot ? "text-gray-500" : "text-purple-100"
+                  }`}
+                >
+                  {message.timestamp.toLocaleTimeString([], {
+                    hour: "2-digit",
+                    minute: "2-digit",
+                  })}
+                </div>
               </div>
-            </div>
+            )}
 
             {!message.isBot && (
               <div className="w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center flex-shrink-0 mt-1">
