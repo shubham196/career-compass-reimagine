@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { GraduationCap, User, FileText, ChartBar, Star, Users, CheckCircle, BookOpen } from "lucide-react";
+import CareerMantraChatbot from "@/components/CareerMantraChatbot";
 
 const CareerCounsellorPage = () => {
   return (
@@ -34,6 +35,21 @@ const CareerCounsellorPage = () => {
               />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Chat with Mantrana AI Section */}
+      <section className="py-16 bg-gradient-to-b from-purple-50 to-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+              Chat with <span className="text-purple-600">Mantrana AI</span>
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Get instant career guidance and explore your future with our AI-powered career counselor
+            </p>
+          </div>
+          <CareerMantraChatbot />
         </div>
       </section>
 
